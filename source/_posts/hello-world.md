@@ -1,22 +1,21 @@
 ---
-title: Hello World
+title: What i did to setup this site
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+Welcome to [wenhui's blog](zhaowenhui.tech)! This is my very first post.
 
-## Quick Start
+## Steps
 
-### Create a new post
+### Create a new repo on github
 
-``` bash
-$ hexo new "My New Post"
+```
+repo named zhaowh3613.github.io
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
 
-### Run server
+### Init hexo
 
 ``` bash
-$ hexo server
+
 ```
 
 More info: [Server](https://hexo.io/docs/server.html)

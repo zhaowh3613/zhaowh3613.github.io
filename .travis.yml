@@ -9,7 +9,7 @@ branches:
 script:
   - hexo clean
   - hexo generate # generate static files
-  - hexo d
+  - hexo deploy
 deploy:
   provider: pages
   skip-cleanup: true

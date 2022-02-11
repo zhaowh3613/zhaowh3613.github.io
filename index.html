@@ -179,7 +179,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-02-11 16:58:21" itemprop="dateCreated datePublished" datetime="2022-02-11T16:58:21+00:00">2022-02-11</time>
+      <time title="Created: 2022-02-11 17:02:19" itemprop="dateCreated datePublished" datetime="2022-02-11T17:02:19+00:00">2022-02-11</time>
     </span>
 
   
@@ -207,6 +207,8 @@
 
 <h3 id="Deploy-to-remote-sites-by-travis-CI"><a href="#Deploy-to-remote-sites-by-travis-CI" class="headerlink" title="Deploy to remote sites by travis CI"></a>Deploy to remote sites by travis CI</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">generate githup personal access token</span><br><span class="line">grant github repo permission to travis</span><br><span class="line">add token to travis Environment Variables</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">add .travis.yml </span><br><span class="line"></span><br><span class="line">sudo: <span class="literal">false</span></span><br><span class="line">language: node_js</span><br><span class="line">node_js:</span><br><span class="line">  - 16 <span class="comment"># use nodejs v10 LTS</span></span><br><span class="line">cache: npm</span><br><span class="line">branches:</span><br><span class="line">  only:</span><br><span class="line">    - master <span class="comment"># build master branch only</span></span><br><span class="line">script:</span><br><span class="line">  - hexo clean</span><br><span class="line">  - hexo generate <span class="comment"># generate static files</span></span><br><span class="line">deploy:</span><br><span class="line">  provider: pages</span><br><span class="line">  skip-cleanup: <span class="literal">true</span></span><br><span class="line">  github-token: <span class="variable">$GH_TOKEN</span></span><br><span class="line">  keep-history: <span class="literal">true</span></span><br><span class="line">  on:</span><br><span class="line">    branch: master</span><br><span class="line">  local-dir: public</span><br></pre></td></tr></table></figure>
+
+<h3 id="Customize-domain"><a href="#Customize-domain" class="headerlink" title="Customize domain"></a>Customize domain</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">purchase personal domain from ali yun</span><br><span class="line">parse my github page ip with domain</span><br><span class="line">update new domain <span class="keyword">in</span> github page of this repo setting page </span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -258,7 +260,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-02-11 14:21:48 / Modified: 16:58:21" itemprop="dateCreated datePublished" datetime="2022-02-11T14:21:48+00:00">2022-02-11</time>
+      <time title="Created: 2022-02-11 14:21:48 / Modified: 17:02:19" itemprop="dateCreated datePublished" datetime="2022-02-11T14:21:48+00:00">2022-02-11</time>
     </span>
 
   

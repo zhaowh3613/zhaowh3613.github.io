@@ -7,13 +7,13 @@ title: Vincent zhao's blog
 subtitle: ''
 description: ''
 keywords:
-author: Jzhaowh
+author: zhaowh
 language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://github.com/zhaowh3613/zhaowh3613.github.io.git
+url: https://zhaowh3613.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:

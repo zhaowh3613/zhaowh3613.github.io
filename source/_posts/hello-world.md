@@ -1,37 +1,82 @@
 ---
 title: What i did to setup this site
 ---
-Welcome to [wenhui's blog](zhaowenhui.tech)! This is my very first post.
+Welcome to [my blog](zhaowenhui.tech)!  This is my very first post.
 
 ## Steps
 
-### Create a new repo on github
+### Create a new repo and push to github
 
 ```
-repo named zhaowh3613.github.io
+repo must be named account_name.github.io
 ```
-
 
 ### Init hexo
 
 ``` bash
-
+$ hexo init blog
+$ cd blog
+$ npm i
 ```
+### Update _config.yml for common
+``` bash
+url: https://username.github.io
+``` 
 
-More info: [Server](https://hexo.io/docs/server.html)
-
+### Update _config.yml for deploy
+``` bash
+deploy:
+  type: git
+  repo: git@github.com:username/username.github.io.git
+  branch: gh-pages
+``` 
+### Update theme
+``` bash
+npm i hexo-theme-next --save
+```
+``` bash
+modify _config.yml as below
+theme: next
+``` 
 ### Generate static files
 
 ``` bash
+$ hexo clean
 $ hexo generate
 ```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
+### Deploy to remote sites manually
 ``` bash
+$ npm i hexo-deployer-git
 $ hexo deploy
 ```
 
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+### Deploy to remote sites by travis CI
+``` bash
+generate githup personal access token
+grant github repo permission to travis
+add token to travis Environment Variables
+```
+``` bash
+add .travis.yml 
+
+sudo: false
+language: node_js
+node_js:
+  - 16 # use nodejs v10 LTS
+cache: npm
+branches:
+  only:
+    - master # build master branch only
+script:
+  - hexo clean
+  - hexo generate # generate static files
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: public
+```

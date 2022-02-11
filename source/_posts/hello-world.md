@@ -80,3 +80,10 @@ deploy:
     branch: master
   local-dir: public
 ```
+
+### Customize domain
+``` bash
+purchase personal domain from ali yun
+parse my github page ip with domain
+update new domain in github page of this repo setting page 
+```

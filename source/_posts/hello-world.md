@@ -34,6 +34,13 @@ deploy:
 ``` bash
 npm i hexo-theme-next --save
 ```
+or
+``` bash
+$ cd hexo
+$ git clone https://github.com/theme-next/hexo-theme-next themes/next
+
+```
+
 ``` bash
 modify _config.yml as below
 theme: next

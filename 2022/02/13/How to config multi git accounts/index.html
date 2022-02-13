@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zhaowh3613.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content="StepsCreate a new repo and push to github">
+  <meta name="description" content="The background is i have to access both github and company git account on my working computer, i wish it can switch git account automatically. Generate ssh pub &amp; private key1$ ssh-keygen -t rsa -C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to config multi git accounts">
 <meta property="og:url" content="https://zhaowh3613.github.io/2022/02/13/How%20to%20config%20multi%20git%20accounts/index.html">
 <meta property="og:site_name" content="Vincent zhao&#39;s blog">
-<meta property="og:description" content="StepsCreate a new repo and push to github">
+<meta property="og:description" content="The background is i have to access both github and company git account on my working computer, i wish it can switch git account automatically. Generate ssh pub &amp; private key1$ ssh-keygen -t rsa -C">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-13T07:20:04.592Z">
-<meta property="article:modified_time" content="2022-02-13T07:20:04.592Z">
+<meta property="article:published_time" content="2022-02-13T10:15:11.700Z">
+<meta property="article:modified_time" content="2022-02-13T10:15:11.700Z">
 <meta property="article:author" content="zhaowh">
 <meta property="article:tag" content="git ssh config">
 <meta name="twitter:card" content="summary">
@@ -119,7 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Steps"><span class="nav-number">1.</span> <span class="nav-text">Steps</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-repo-and-push-to-github"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new repo and push to github</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Generate-ssh-pub-amp-private-key"><span class="nav-number">1.</span> <span class="nav-text">Generate ssh pub &amp; private key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-ssh-pub-key-to-github-settings"><span class="nav-number">2.</span> <span class="nav-text">Add ssh pub key to github settings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-independence-ssh-configuration-file-for-different-git-account"><span class="nav-number">3.</span> <span class="nav-text">Create independence ssh configuration file for different git account</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-configuration-file"><span class="nav-number">4.</span> <span class="nav-text">Set configuration file</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -202,7 +202,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2022-02-13 07:20:04" itemprop="dateCreated datePublished" datetime="2022-02-13T07:20:04+00:00">2022-02-13</time>
+      <time title="Created: 2022-02-13 10:15:11" itemprop="dateCreated datePublished" datetime="2022-02-13T10:15:11+00:00">2022-02-13</time>
     </span>
 
   
@@ -215,7 +215,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><h3 id="Create-a-new-repo-and-push-to-github"><a href="#Create-a-new-repo-and-push-to-github" class="headerlink" title="Create a new repo and push to github"></a>Create a new repo and push to github</h3>
+        <p>The background is i have to access both github and company git account on my working computer, i wish it can switch git account automatically.</p>
+<h2 id="Generate-ssh-pub-amp-private-key"><a href="#Generate-ssh-pub-amp-private-key" class="headerlink" title="Generate ssh pub &amp; private key"></a><strong>Generate ssh pub &amp; private key</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;your_github_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Add-ssh-pub-key-to-github-settings"><a href="#Add-ssh-pub-key-to-github-settings" class="headerlink" title="Add ssh pub key to github settings"></a><strong>Add ssh pub key to github settings</strong></h2><h2 id="Create-independence-ssh-configuration-file-for-different-git-account"><a href="#Create-independence-ssh-configuration-file-for-different-git-account" class="headerlink" title="Create independence ssh configuration file for different git account"></a><strong>Create independence ssh configuration file for different git account</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root directory：~\\.ssh </span><br><span class="line">-  /company/.gitconfig-company</span><br><span class="line">-  /github/.gitconfig-github</span><br><span class="line">- .config</span><br></pre></td></tr></table></figure>
+<h2 id="Set-configuration-file"><a href="#Set-configuration-file" class="headerlink" title="Set configuration file"></a><strong>Set configuration file</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.gitconfig-company</span><br><span class="line"></span><br><span class="line">[User]</span><br><span class="line">	name = username</span><br><span class="line">    email = company git account email</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.gitconfig-github</span><br><span class="line"></span><br><span class="line">[User]</span><br><span class="line">	name = username</span><br><span class="line">    email = github account email</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.config</span><br><span class="line"></span><br><span class="line"><span class="comment">#git for company</span></span><br><span class="line">Host </span><br><span class="line">User </span><br><span class="line">IdentityFile ~/.ssh/company/zhaowh3_rsa</span><br><span class="line">  </span><br><span class="line"><span class="comment">#git for github</span></span><br><span class="line">Host github.com</span><br><span class="line">HostName github.com </span><br><span class="line">User git</span><br><span class="line">IdentityFile ~/.ssh/github/id_rsa_github</span><br></pre></td></tr></table></figure>
+
     </div>
 
     

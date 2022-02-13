@@ -1,5 +1,8 @@
 ---
-title: first
-date: 2022-02-11 14:21:48
-tags:
+title: How to config multi git accounts 
+date: 
+tags: git ssh config
 ---
+## Steps
+
+### Create a new repo and push to github

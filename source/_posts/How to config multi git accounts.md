@@ -2,6 +2,7 @@
 title: How to config multi git accounts 
 date: 
 tags: git ssh config
+category: git
 ---
 The background is i have to access both github and company git account on my working computer, i wish it can switch git account automatically.
 

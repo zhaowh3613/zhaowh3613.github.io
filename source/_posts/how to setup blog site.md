@@ -1,5 +1,6 @@
 ---
 title: What i did to setup this site
+tag: blog site
 ---
 Welcome to [my blog](https://www.zhaowenhui.tech)!  This is my very first post. It records the steps about how to setup personal blog site on github and how to use travis CI to auto deploy the changes. 
 
@@ -33,6 +34,8 @@ deploy:
 ### Update theme
 ``` bash
 npm i hexo-theme-next --save
+
+copy _config.next.yml to the root directory
 ```
 or
 ``` bash

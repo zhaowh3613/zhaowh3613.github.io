@@ -250,9 +250,24 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  awl: 4
+  wpm: 275
+  suffix: "mins."
   separated_meta: true
   item_text_post: true
   item_text_total: false
+
+# post_wordcount:
+#   item_text: true
+#   wordcount: true
+#   min2read: true
+#   totalcount: true
+#   separated_meta: true
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: true
@@ -853,9 +868,9 @@ pace:
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
 three:
-  enable: false
+  enable: true
   three_waves: false
-  canvas_lines: false
+  canvas_lines: true
   canvas_sphere: false
 
 # Canvas-ribbon
